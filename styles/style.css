@@ -1,0 +1,77 @@
+.captioning{
+    font-size: 12pt;
+}
+.site_font{
+    font-family: Zeyada;
+    color:rgb(44, 206, 44);
+}
+.button_resume{
+    background-color: blueviolet;
+}
+p{
+     font-family: Zeyada;
+    color:rgb(44, 206, 44);
+    font-size: 16pt;
+}
+h1{
+    font-family: Zeyada;
+    color:rgb(44, 206, 44);
+    font-size: 45pt;
+}
+h2{
+    font-family: Zeyada;
+    color:rgb(44, 206, 44);
+    font-size: 40pt;
+}
+h3{
+    font-family: Zeyada;
+    color:rgb(44, 206, 44);
+    font-size: 32pt;
+}
+h4{
+    font-family: Zeyada;
+    color:rgb(44, 206, 44);
+    font-size: 26pt;
+}
+li{
+    font-family: Italianno;
+    color:rgb(44, 206, 44);
+    font-size: 26pt;
+}
+.resume{
+    background-color: floralwhite;
+    margin-bottom: 5rem;
+}
+
+.hobby-image{
+    max-width: 400px;
+    min-width: 200px;
+    width: 400px;
+    height:400px;
+}
+iframe{
+    max-width: 400px;
+    min-width: 200px;
+}
+
+@media(max-width:1000px) {
+    #start_page_intro{
+        order: -1;
+        text-align: center;
+    }
+    #start_page{
+        justify-content: center;
+    }
+    .hobby-image{
+        width: 200px;
+        height:200px;
+    }
+    iframe{
+        width: 400px;
+        height:200px;
+    }
+    .hobbie{
+        order:2;
+    }
+    
+}
