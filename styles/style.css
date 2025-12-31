@@ -5,6 +5,9 @@
     font-family: Zeyada;
     color:rgb(44, 206, 44);
 }
+.green-text{
+    color:rgb(44, 206, 44);
+}
 .button_resume{
     background-color: blueviolet;
 }
@@ -43,13 +46,31 @@ li{
     margin-bottom: 5rem;
 }
 
+.hobbieContainer{
+    margin-left: 0;
+}
+
 .hobby-image{
     max-width: 400px;
     min-width: 200px;
     width: 400px;
     height:400px;
 }
+
 iframe{
+    max-width: 400px;
+    min-width: 200px;
+}
+
+#featured-3{
+    margin: 0;
+}
+
+#aboutSummaryHeader{
+    background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%)
+}
+
+.restrictedSize{
     max-width: 400px;
     min-width: 200px;
 }
