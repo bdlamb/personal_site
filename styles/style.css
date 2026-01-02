@@ -14,27 +14,27 @@
 p{
      font-family: Zeyada;
     color:rgb(44, 206, 44);
-    font-size: 16pt;
+    font-size: 18pt;
 }
 h1{
     font-family: Zeyada;
     color:rgb(44, 206, 44);
-    font-size: 45pt;
+    font-size: 4em;
 }
 h2{
     font-family: Zeyada;
     color:rgb(44, 206, 44);
-    font-size: 40pt;
+    font-size: 3em;
 }
 h3{
     font-family: Zeyada;
     color:rgb(44, 206, 44);
-    font-size: 32pt;
+    font-size: 2em;
 }
 h4{
     font-family: Zeyada;
     color:rgb(44, 206, 44);
-    font-size: 26pt;
+    font-size:1em;
 }
 li{
     font-family: Italianno;
@@ -48,6 +48,10 @@ li{
 
 .hobbieContainer{
     margin-left: 0;
+}
+
+.no-margins{
+    margin: 0;
 }
 
 .hobby-image{
@@ -75,6 +79,51 @@ iframe{
     min-width: 200px;
 }
 
+.mytoggle{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+
+    .button{
+        background-color: #d2d2d2;
+        width: 2em;
+        height: 1em;
+        border-radius: 200px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.2s;
+    }
+    .button::before{
+        position: absolute;
+        content: '';
+        background-color: #fff;
+        width: 1em;
+        height: 1em;
+        border-radius: 200px;
+        transition: 0.2s;
+    }
+    input{
+        display: none;
+    }
+    input:checked + .button{
+        background-color: #20096d;
+    }
+    input:checked + .button::before{
+        transform: translateX(-1em);
+    }
+    div{
+        color: blue;
+        font-size: 16pt;
+    }
+}
+
+.websiteHeader{
+    :last-child{
+        align-content: center;
+    }
+}
+
 @media(max-width:1000px) {
     #start_page_intro{
         order: -1;
@@ -95,4 +144,8 @@ iframe{
         order:2;
     }
     
+}
+
+.dark-mode{
+    background-color: black;
 }
