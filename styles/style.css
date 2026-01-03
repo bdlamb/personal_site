@@ -74,8 +74,30 @@ iframe{
     margin: 0;
 }
 
+#contactHeading{
+    text-align: center;
+}
+
+#introPanel{
+    background-image: url("../assets/images/forest1.jpg");
+}
+
 #aboutSummaryHeader{
     background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%)
+}
+
+#personalPhoto{
+    border-radius: 50%;
+}
+
+#homePersonalPhotoContainer{
+    display: flex; 
+    width:100%; 
+    height: 20rem; 
+    position: relative; 
+    background: linear-gradient(to bottom,#3fea2c, #31c47f 50%,white 50%); 
+    flex-wrap: wrap; 
+    align-content: center;
 }
 
 .restrictedSize{
@@ -151,6 +173,7 @@ iframe{
     background-color: green;
 }
 
+
 @media(max-width:1000px) {
     #start_page_intro{
         order: -1;
@@ -184,4 +207,12 @@ iframe{
 
 .dark-mode{
     background-color: black;
+
+    #homePersonalPhotoContainer{
+        background: linear-gradient(to bottom,#3fea2c, #31c47f 50%,black 50%);
+    }
+
+    .resume{
+        background-color:lavender
+    }
 }
