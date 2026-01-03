@@ -1,11 +1,12 @@
 function darkModeChange(e){
-    console.log(e);
+    document.body.classList.toggle('dark-mode');
+    /*console.log(e);
     if(e.currentTarget.checked){
         document.body.classList.toggle('dark-mode');
     }
     else{
         document.body.classList.toggle('dark-mode');
-    }
+    }*/
 }
 
 $("#check").on("click",darkModeChange);
@@ -19,7 +20,7 @@ async function changePageContent(swapPage){
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     const element=doc.querySelector("div");
-    
+
     $("#pageContent").empty().append(element);
 
 

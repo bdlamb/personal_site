@@ -16,7 +16,7 @@
 <body>
     <section header>
         <div class="container" id="nav"> 
-            <header class="d-flex justify-content-center py-3"> 
+            <header class="d-flex py-3"> 
                 <ul class="nav nav-pills websiteHeader"> 
                     <li class="nav-item">
                         <button id="home" class="nav-link active" aria-current="page" onclick="changePageContent('home')">Home</button>
@@ -33,15 +33,25 @@
                     <li class="nav-item">
                         <button id="contact" class="nav-link " aria-current="page" onclick="changePageContent('contact')">contact</button>
                     </li> 
-                    <li class="nav-item"">
+                    <li class="nav-item">
                         <div class="container mytoggle">
                             <input type="checkbox" id="check">
                             <label for="check" class="button"></label>
                             <div>Dark mode</div>
                         </div>
                     </li> 
-
-                </ul> 
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" onclick="changePageContent('home')">Home</a></li>
+                        <li><a class="dropdown-item" onclick="changePageContent('about')">About</a></li>
+                        <li><a class="dropdown-item" onclick="changePageContent('resume')">Resume</a></li>
+                        <li><a class="dropdown-item" onclick="changePageContent('samples')">Samples</a></li>
+                        <li><a class="dropdown-item" onclick="changePageContent('contact')">Contact</a></li>
+                        <li><a class="dropdown-item" onclick="darkModeChange()">Toggle Dark</a></li>
+                    </ul>
+                </div>
             </header>
             <div>
                 <div id="pageContent">   

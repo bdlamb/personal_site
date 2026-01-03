@@ -41,6 +41,10 @@ li{
     color:rgb(44, 206, 44);
     font-size: 26pt;
 }
+header{
+        justify-content: center;
+}
+
 .resume{
     background-color: floralwhite;
     margin-bottom: 5rem;
@@ -124,6 +128,29 @@ iframe{
     }
 }
 
+.dropdown{
+    display: none;
+}
+
+.dropdown-toggle{
+    color:blue;
+    background-color: transparent;
+    border:none;
+}
+.dropdown-toggle:hover{
+    background-color: green;
+}
+
+.dropdown-item{
+        color: blue;
+}
+.dropdown-item:hover{
+    color:green;
+}
+.dropdown-toggle:focus{
+    background-color: green;
+}
+
 @media(max-width:1000px) {
     #start_page_intro{
         order: -1;
@@ -143,6 +170,15 @@ iframe{
     .hobbie{
         order:2;
     }
+    .websiteHeader{
+        display: none;
+    }
+    header{
+        justify-content: right;
+    }
+    .dropdown{
+    display:contents;
+}
     
 }
 
