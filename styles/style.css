@@ -1,53 +1,68 @@
-.captioning{
-    font-size: 12pt;
-}
-.site_font{
-    font-family: Zeyada;
-    color:rgb(44, 206, 44);
-}
-.green-text{
-    color:rgb(44, 206, 44);
-}
-.button_resume{
-    background-color: blueviolet;
-}
 p{
-     font-family: Zeyada;
-    color:rgb(44, 206, 44);
-    font-size: 18pt;
-}
-h1{
-    font-family: Zeyada;
-    color:rgb(44, 206, 44);
-    font-size: 4em;
-}
-h2{
-    font-family: Zeyada;
-    color:rgb(44, 206, 44);
-    font-size: 3em;
-}
-h3{
-    font-family: Zeyada;
-    color:rgb(44, 206, 44);
     font-size: 2em;
+    font-family: Italianno;
+    color:rgb(127, 218, 52);
 }
-h4{
+
+h1{
+    font-size: 5em;
     font-family: Zeyada;
     color:rgb(44, 206, 44);
-    font-size:1em;
 }
-li{
+
+h2{
+    font-size: 4em;
+    font-family: Zeyada;
+    color: blue;
+}
+
+h3{
+    font-size: 2em;
     font-family: Italianno;
     color:rgb(44, 206, 44);
-    font-size: 26pt;
 }
+
+h4{
+    font-size:1em;
+}
+
 header{
-        justify-content: center;
+    justify-content: center;
+}
+
+li{
+    font-size: 26pt;
+    font-family: Italianno;
+    color:rgb(44, 206, 44);
+    ul{
+        li{
+            font-family: Italianno;
+            color:rgb(127, 218, 52);
+        }
+    }
 }
 
 .resume{
     background-color: floralwhite;
     margin-bottom: 5rem;
+}
+
+.captioning{
+    font-size: 12pt;
+}
+
+.site_font{
+    font-family: Zeyada;
+    color:rgb(44, 206, 44);
+}
+
+.site_font_alternative{
+    font-family: Italianno;
+    color:rgb(113, 211, 34);
+}
+
+.caption_email{
+    font-size: 18pt;
 }
 
 .hobbieContainer{
@@ -83,7 +98,7 @@ iframe{
 }
 
 #aboutSummaryHeader{
-    background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%)
+    background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
 }
 
 #personalPhoto{
@@ -100,6 +115,10 @@ iframe{
     align-content: center;
 }
 
+#resumeTitle{
+     background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%)
+}
+
 .restrictedSize{
     max-width: 400px;
     min-width: 200px;
@@ -114,17 +133,18 @@ iframe{
     .button{
         background-color: #d2d2d2;
         width: 2em;
-        height: 1em;
+        height: 1.1em;
         border-radius: 200px;
         cursor: pointer;
         position: relative;
         transition: 0.2s;
+        border:2pt solid black;
     }
     .button::before{
         position: absolute;
         content: '';
         background-color: #fff;
-        width: 1em;
+        width: .9em;
         height: 1em;
         border-radius: 200px;
         transition: 0.2s;
@@ -134,6 +154,7 @@ iframe{
     }
     input:checked + .button{
         background-color: #20096d;
+
     }
     input:checked + .button::before{
         transform: translateX(-1em);
@@ -214,5 +235,9 @@ iframe{
 
     .resume{
         background-color:lavender
+    }
+    
+    #linkin{
+        fill: white;
     }
 }

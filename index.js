@@ -1,3 +1,14 @@
+var buttonSound=new Audio("./assets/sounds/button.mp3");
+var sliderSound=new Audio("./assets/sounds/slider.mp3");
+
+$(".nav-link, .dropdown-item:not(:last)").on("click",()=>{
+    buttonSound.play();
+});
+
+$("#check").on("click",()=>{
+    sliderSound.play();
+});
+
 function darkModeChange(e){
     document.body.classList.toggle('dark-mode');
 }
