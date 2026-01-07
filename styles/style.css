@@ -82,6 +82,22 @@ li li{
     height:400px;
 }
 
+.pdf-container{
+    justify-content: end;
+    margin-bottom: 2em;
+}
+
+.pdf-button{
+    border-radius: 20%;
+    background-color: blue;
+    color:rgb(127, 218, 52);
+}
+
+.customHeader{
+    background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+}
+
+
 iframe{
     max-width: 400px;
     min-width: 200px;
@@ -99,10 +115,6 @@ iframe{
     background-image: url("../assets/images/forest1.jpg");
 }
 
-#aboutSummaryHeader{
-    background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
-}
-
 #personalPhoto{
     border-radius: 50%;
 }
@@ -115,10 +127,6 @@ iframe{
     background: linear-gradient(to bottom,#3fea2c, #31c47f 50%,white 50%); 
     flex-wrap: wrap; 
     align-content: center;
-}
-
-#resumeTitle{
-     background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%)
 }
 
 .restrictedSize{
@@ -243,6 +251,13 @@ iframe{
         fill: white;
     }
 }
+
+.for-pdf{
+    background-color: white;
+    color:black;
+    background-image: none;
+}
+
 
 @media print{
 

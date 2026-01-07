@@ -9,6 +9,7 @@ $("#check").on("click",()=>{
     sliderSound.play();
 });
 
+
 function darkModeChange(e){
     document.body.classList.toggle('dark-mode');
 }
@@ -29,6 +30,21 @@ function checkColoring(){
     }
 }
 
+async function pageToPdf(){
+    $("#resumeTitle").html("Brian Lamb");
+    $("*").addClass("for-pdf");
+    $(".pdf-button").toggle();
+    var opts={
+        margin: [10, 10, 10, 10],
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] },
+        html2canvas: { scale: 2, letterRendering: true }
+    };
+    await html2pdf().set(opts).from(document.getElementById('pageContent')).save('Brian-Lamb-Resume.pdf');
+    $("#resumeTitle").html("Resume");
+    $(".pdf-button").toggle();
+    $("*").removeClass("for-pdf");
+}
+
 async function changePageContent(swapPage){
     var file= await fetch(swapPage.toLowerCase()+".html");
     var html=await file.text();
@@ -43,5 +59,6 @@ async function changePageContent(swapPage){
     $("#nav button.active").removeClass("active");
     $("#"+swapPage).addClass("active");
 }
+
 
 //alert("js");
