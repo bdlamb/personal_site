@@ -34,12 +34,11 @@ li{
     font-size: 26pt;
     font-family: Italianno;
     color:rgb(44, 206, 44);
-    ul{
-        li{
-            font-family: Italianno;
-            color:rgb(127, 218, 52);
-        }
-    }
+}
+
+li li{
+    font-family: Italianno;
+    color:rgb(127, 218, 52);
 }
 
 .resume{
@@ -63,6 +62,9 @@ li{
 
 .caption_email{
     font-size: 18pt;
+    font-family: Italianno;
+    color:rgb(113, 211, 34);
+    text-wrap: none;
 }
 
 .hobbieContainer{
@@ -240,4 +242,43 @@ iframe{
     #linkin{
         fill: white;
     }
+}
+
+@media print{
+
+    #homePictureIntro{
+        visibility:hidden;
+        width:0;
+        height:0;
+    }
+
+    #introPanel{
+        background-image: none;
+    }
+
+    #homePersonalPhotoContainer{
+        display: none;
+    }
+
+    #aboutSummaryHeader{
+        background-image: none;
+    }
+
+    .carousel{
+        display: none;
+    }
+
+    #resumeTitle{
+        background-image: none;
+    }
+
+    h1, h2, h3, h4, p, a, li, li li, .nav-link{
+        color: black;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
 }
