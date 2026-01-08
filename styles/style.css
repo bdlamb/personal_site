@@ -1,13 +1,14 @@
 p{
     font-size: 2em;
     font-family: Italianno;
-    color:rgb(127, 218, 52);
+    /*color:rgb(127, 218, 52); orginal light color */
+    color:#5b9e24;
 }
 
 h1{
     font-size: 5em;
     font-family: Zeyada;
-    color:rgb(44, 206, 44);
+    color:#22a622;
 }
 
 h2{
@@ -19,7 +20,8 @@ h2{
 h3{
     font-size: 2em;
     font-family: Italianno;
-    color:rgb(44, 206, 44);
+    /*color:rgb(44, 206, 44);  original darker color*/
+    color:#22a622;
 }
 
 h4{
@@ -33,12 +35,12 @@ header{
 li{
     font-size: 26pt;
     font-family: Italianno;
-    color:rgb(44, 206, 44);
+    color:#22a622;
 }
 
 li li{
     font-family: Italianno;
-    color:rgb(127, 218, 52);
+    color:#5b9e24;
 }
 
 .resume{
@@ -63,8 +65,9 @@ li li{
 .caption_email{
     font-size: 18pt;
     font-family: Italianno;
-    color:rgb(113, 211, 34);
+    color:#5b9e24;
     text-wrap: none;
+    margin-left: 1em;
 }
 
 .hobbieContainer{
@@ -82,6 +85,10 @@ li li{
     height:400px;
 }
 
+.green-on-black{
+    color:rgb(127, 218, 52);
+}
+
 .pdf-container{
     justify-content: end;
     margin-bottom: 2em;
@@ -94,9 +101,27 @@ li li{
 }
 
 .customHeader{
-    background-image: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+    background-image: linear-gradient(90deg, #0033ff 0%, #2CCE2C 100%);
 }
 
+.fa {
+  padding: 20px;
+  font-size: 26px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.icon-footer{
+    fill: #5b9e24;
+    margin-left:1em;
+}
 
 iframe{
     max-width: 400px;
@@ -169,9 +194,10 @@ iframe{
     input:checked + .button::before{
         transform: translateX(-1em);
     }
+
     div{
-        color: blue;
-        font-size: 16pt;
+        color: #0d6efd;
+        font-size: 26pt;
     }
 }
 
@@ -244,12 +270,21 @@ iframe{
     }
 
     .resume{
-        background-color:lavender
+        background-color:#fdfdff;
     }
     
     #linkin{
         fill: white;
     }
+
+    h2{
+        color:#8383f2;
+    }
+    
+    p{
+        color:rgb(127, 218, 52);
+    }
+
 }
 
 .for-pdf{
