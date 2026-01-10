@@ -1,7 +1,10 @@
+body{
+    min-width: 553px;
+}
+
 p{
     font-size: 2em;
     font-family: Italianno;
-    /*color:rgb(127, 218, 52); orginal light color */
     color:#5b9e24;
 }
 
@@ -20,7 +23,6 @@ h2{
 h3{
     font-size: 2em;
     font-family: Italianno;
-    /*color:rgb(44, 206, 44);  original darker color*/
     color:#22a622;
 }
 
@@ -33,7 +35,7 @@ header{
 }
 
 li{
-    font-size: 26pt;
+    font-size: 3rem;
     font-family: Italianno;
     color:#22a622;
 }
@@ -43,27 +45,24 @@ li li{
     color:#5b9e24;
 }
 
+footer{
+    background-image: url("../assets/images/leaf.gif");
+    background-size: contain;
+    background-repeat: round;
+}
+
 .resume{
     background-color: floralwhite;
     margin-bottom: 5rem;
+    padding:0;
 }
 
 .captioning{
-    font-size: 12pt;
-}
-
-.site_font{
-    font-family: Zeyada;
-    color:rgb(44, 206, 44);
-}
-
-.site_font_alternative{
-    font-family: Italianno;
-    color:rgb(113, 211, 34);
+    font-size: 2em;
 }
 
 .caption_email{
-    font-size: 18pt;
+    font-size: 2em;
     font-family: Italianno;
     color:#5b9e24;
     text-wrap: none;
@@ -121,6 +120,32 @@ li li{
 .icon-footer{
     fill: #5b9e24;
     margin-left:1em;
+}
+
+.more-title{
+    display: flex;
+    margin-bottom: 3em;
+}
+
+.more-title-text{
+    align-self: center;
+    margin-left: .5em;
+}
+
+.more-icon{
+    width: 100pt;
+    height: 100pt;
+}
+.more-text{
+    padding-left: 1em;
+}
+
+.span-clickable{
+    color: blue;
+}
+
+.span-clickable:hover{
+    cursor: pointer;
 }
 
 iframe{
@@ -291,8 +316,8 @@ iframe{
     background-color: white;
     color:black;
     background-image: none;
-}
 
+}
 
 @media print{
 
@@ -322,7 +347,7 @@ iframe{
         background-image: none;
     }
 
-    h1, h2, h3, h4, p, a, li, li li, .nav-link{
+    h1, h2, h3, h4, p, a, li, li li, .span-clickable, .nav-link{
         color: black;
     }
 
@@ -330,5 +355,16 @@ iframe{
         margin: 0;
         padding: 0;
     }
+}
 
+.page{
+    position: relative;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease
+}
+
+.show{
+    transform: translateX(0);
+    opacity: 1;
 }

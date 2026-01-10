@@ -51,14 +51,32 @@ async function changePageContent(swapPage){
     //console.log(html);
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
-    const element=doc.querySelector("div");
+    var element=doc.querySelector("div");
+    element.classList.add("page");
 
     $("#pageContent").empty().append(element);
 
 
     $("#nav button.active").removeClass("active");
     $("#"+swapPage).addClass("active");
+     void element.offsetWidth;
+
+  // Add the "show" class to trigger the transition
+    element.classList.add('show')
 }
 
+async function loadMore(swapPage){
+    console.log("in load");
+    var file= await fetch("experinces.html");
+    var html=await file.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    var element=doc.querySelector('#'+swapPage);
+    element.classList.add("page");
 
-//alert("js");
+    $("#pageContent").empty().append(element);
+    void element.offsetWidth;
+
+  // Add the "show" class to trigger the transition
+    element.classList.add('show')
+}
