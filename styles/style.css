@@ -142,6 +142,7 @@ footer{
 
 .span-clickable{
     color: blue;
+    text-decoration-line: underline;
 }
 
 .span-clickable:hover{
@@ -367,4 +368,14 @@ iframe{
 .show{
     transform: translateX(0);
     opacity: 1;
+}
+
+.icon{
+    width: 40pt;
+    height: 40pt;
+    background-color: transparent;
+}
+
+.textCenter{
+    text-align: center;
 }
