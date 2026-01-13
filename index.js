@@ -24,7 +24,7 @@ $("#check").on("click",darkModeChange);
 movePage("home");
 checkColoring();
 
-history.pushState({ page: 1 }, "", "");
+history.pushState({ page: "home" }, "", "");
 
 window.addEventListener("popstate", (ev)=>{
     console.log("back hit");
@@ -36,7 +36,7 @@ window.addEventListener("popstate", (ev)=>{
         changePageContent(_current);
        console.log(_history);
     }
-    history.pushState({ page: 1 }, "", "");
+    history.replaceState({ page: _history[_history.length-1]}, "", "");
 });
 
 function checkColoring(){
@@ -86,7 +86,7 @@ async function changePageContent(swapPage){
     $("#pageContent").empty().append(element);
 
 
-    if(swapPage!="references"){
+    if(swapPage!="references" && fileElements.length===1){
         $("#nav button.active").removeClass("active");
         $("#"+swapPage).addClass("active");
     }
