@@ -1,6 +1,7 @@
 var buttonSound=new Audio("./assets/sounds/button.mp3");
 var sliderSound=new Audio("./assets/sounds/slider.mp3");
-
+var _history=[];
+var _current="";
 $(".nav-link, .dropdown-item:not(:last)").on("click",()=>{
     buttonSound.play();
 });
@@ -20,8 +21,23 @@ function darkModeChangeCompact(){
 
 $("#check").on("click",darkModeChange);
 
-changePageContent("home");
+movePage("home");
 checkColoring();
+
+history.pushState({ page: 1 }, "", "");
+
+window.addEventListener("popstate", (ev)=>{
+    console.log("back hit");
+    if(_history.length==0){
+        history.back();
+    }
+    else{
+        _current=_history.pop();
+        changePageContent(_current);
+       console.log(_history);
+    }
+    history.pushState({ page: 1 }, "", "");
+});
 
 function checkColoring(){
     var darkThemPefered=window.matchMedia('(prefers-color-scheme: dark)');
@@ -45,13 +61,26 @@ async function pageToPdf(){
     $("*").removeClass("for-pdf");
 }
 
+async function movePage(swapPage) {
+    changePageContent(swapPage);
+    updateHistory(true,swapPage);
+}
+
 async function changePageContent(swapPage){
-    var file= await fetch(swapPage.toLowerCase()+".html");
+    var fileElements=swapPage.split(" ");
+    //console.log(fileElements);
+
+    var file= await fetch(fileElements[0]+".html");
     var html=await file.text();
-    //console.log(html);
+
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
-    var element=doc.querySelector("div");
+    var elementToGrab="div";
+    if(fileElements.length>1){
+        elementToGrab=`#${fileElements[1]}`;
+    }
+    //console.log(elementToGrab);
+    var element=doc.querySelector(`${elementToGrab}`);
     element.classList.add("page");
 
     $("#pageContent").empty().append(element);
@@ -69,19 +98,12 @@ async function changePageContent(swapPage){
 
 }
 
-async function loadMore(swapPage){
-    console.log("in load");
-    var file= await fetch("experinces.html");
-        var html=await file.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        var element=doc.querySelector('#'+swapPage);
-        element.classList.add("page");
-
-        $("#pageContent").empty().append(element);
-        void element.offsetWidth;
-
-    // Add the "show" class to trigger the transition
-        element.classList.add('show')
-   
+function updateHistory(add,location=null){
+    if(add){
+        if(_current){
+            _history.push(_current);
+        }
+        _current=location;
+    }
+    console.log(_history);
 }

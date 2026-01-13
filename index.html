@@ -20,19 +20,19 @@
             <header class="d-flex py-3">
                 <ul class="nav nav-pills websiteHeader"> 
                     <li class="nav-item">
-                        <button id="home" class="nav-link active" aria-current="page" onclick="changePageContent('home')">Home</button>
+                        <button id="home" class="nav-link active" aria-current="page" onclick="movePage('home')">Home</button>
                     </li> 
                     <li class="nav-item">
-                        <button id="about" class="nav-link " aria-current="page" onclick="changePageContent('about')">About</button>
+                        <button id="about" class="nav-link " aria-current="page" onclick="movePage('about')">About</button>
                     </li> 
                     <li class="nav-item">
-                        <button id="resume" class="nav-link " aria-current="page" onclick="changePageContent('resume')">Resume</button>
+                        <button id="resume" class="nav-link " aria-current="page" onclick="movePage('resume')">Resume</button>
                     </li> 
                     <li class="nav-item">
-                       <button id="samples" class="nav-link " aria-current="page" onclick="changePageContent('samples')">Samples</button>
+                       <button id="samples" class="nav-link " aria-current="page" onclick="movePage('samples')">Samples</button>
                     </li> 
                     <li class="nav-item">
-                        <button id="contact" class="nav-link " aria-current="page" onclick="changePageContent('certs')">Certs</button>
+                        <button id="contact" class="nav-link " aria-current="page" onclick="movePage('certs')">Certs</button>
                     </li>
                     <li class="nav-item">
                         <div class="container mytoggle">
@@ -45,11 +45,11 @@
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-label="Navigation dropdown button" aria-expanded="false"></button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="changePageContent('home')">Home</a></li>
-                        <li><a class="dropdown-item" onclick="changePageContent('about')">About</a></li>
-                        <li><a class="dropdown-item" onclick="changePageContent('resume')">Resume</a></li>
-                        <li><a class="dropdown-item" onclick="changePageContent('samples')">Samples</a></li>
-                        <li><a class="dropdown-item" onclick="changePageContent('certs')">Certs</a></li>
+                        <li><a class="dropdown-item" onclick="movePage('home')">Home</a></li>
+                        <li><a class="dropdown-item" onclick="movePage('about')">About</a></li>
+                        <li><a class="dropdown-item" onclick="movePage('resume')">Resume</a></li>
+                        <li><a class="dropdown-item" onclick="movePage('samples')">Samples</a></li>
+                        <li><a class="dropdown-item" onclick="movePage('certs')">Certs</a></li>
                         <li><a class="dropdown-item" onclick="darkModeChangeCompact()">Toggle Dark</a></li>
                     </ul>
                 </div>
