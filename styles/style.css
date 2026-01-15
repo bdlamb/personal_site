@@ -101,6 +101,7 @@ footer{
 
 .customHeader{
     background-image: linear-gradient(90deg, #0033ff 0%, #2CCE2C 100%);
+    padding-left: 10pt;
 }
 
 .fa {

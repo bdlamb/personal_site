@@ -70,7 +70,7 @@ async function changePageContent(swapPage){
     var fileElements=swapPage.split(" ");
     //console.log(fileElements);
 
-    var file= await fetch(fileElements[0]+".html");
+    var file= await fetch("src/html/"+fileElements[0]+".html");
     var html=await file.text();
 
     const parser = new DOMParser();
