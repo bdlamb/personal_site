@@ -32,6 +32,12 @@ h4{
 
 header{
     justify-content: center;
+    border-style: inset;
+    border-width: 10px;
+    /*border-image: linear-gradient(45deg, rgb(0, 143, 104), rgb(250, 224, 66)) 1;*/
+    border-color: rgb(44, 224, 44);
+    border-top: 0;;
+    display:block;
 }
 
 li{
@@ -51,6 +57,11 @@ footer{
     background-repeat: round;
 }
 
+iframe{
+    max-width: 400px;
+    min-width: 200px;
+}
+
 .resume{
     background-color: floralwhite;
     margin-bottom: 5rem;
@@ -61,7 +72,7 @@ footer{
     font-size: 2em;
 }
 
-.caption_email{
+.footer_text{
     font-size: 2em;
     font-family: Italianno;
     color:#5b9e24;
@@ -71,10 +82,6 @@ footer{
 
 .hobbieContainer{
     margin-left: 0;
-}
-
-.no-margins{
-    margin: 0;
 }
 
 .hobby-image{
@@ -118,11 +125,6 @@ footer{
   color: white;
 }
 
-.icon-footer{
-    fill: #5b9e24;
-    margin-left:1em;
-}
-
 .more-title{
     display: flex;
     margin-bottom: 3em;
@@ -150,40 +152,66 @@ footer{
     cursor: pointer;
 }
 
-iframe{
-    max-width: 400px;
-    min-width: 200px;
-}
-
-#featured-3{
-    margin: 0;
-}
-
-#contactHeading{
-    text-align: center;
-}
-
-#introPanel{
-    background-image: url("../assets/images/forest1.jpg");
-}
-
-#personalPhoto{
-    border-radius: 50%;
-}
-
-#homePersonalPhotoContainer{
-    display: flex; 
-    width:100%; 
-    height: 20rem; 
-    position: relative; 
-    background: linear-gradient(to bottom,#3fea2c, #31c47f 50%,white 50%); 
-    flex-wrap: wrap; 
-    align-content: center;
-}
-
 .restrictedSize{
     max-width: 400px;
     min-width: 200px;
+}
+
+.websiteHeader{
+    :last-child{
+        align-content: center;
+    }
+}
+
+.dropdown{
+    display: none;
+}
+
+.dropdown-toggle{
+    color:black;
+    background-color: #22a622;
+    border:none;
+}
+.dropdown-toggle:hover{
+    background-color: blue;
+}
+
+.dropdown-item{
+        color: blue;
+}
+.dropdown-item:hover{
+    color:blue;
+}
+
+.dropdown-toggle:focus{
+    background-color: blue;
+}
+
+.for-pdf{
+    background-color: white;
+    color:black;
+    background-image: none;
+
+}
+
+.page{
+    position: relative;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease
+}
+
+.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.nav-item{
+    margin: 5pt;
 }
 
 .mytoggle{
@@ -228,67 +256,6 @@ iframe{
     }
 }
 
-.websiteHeader{
-    :last-child{
-        align-content: center;
-    }
-}
-
-.dropdown{
-    display: none;
-}
-
-.dropdown-toggle{
-    color:blue;
-    background-color: transparent;
-    border:none;
-}
-.dropdown-toggle:hover{
-    background-color: green;
-}
-
-.dropdown-item{
-        color: blue;
-}
-.dropdown-item:hover{
-    color:green;
-}
-.dropdown-toggle:focus{
-    background-color: green;
-}
-
-
-@media(max-width:1000px) {
-    #start_page_intro{
-        order: -1;
-        text-align: center;
-    }
-    #start_page{
-        justify-content: center;
-    }
-    .hobby-image{
-        width: 200px;
-        height:200px;
-    }
-    iframe{
-        width: 400px;
-        height:200px;
-    }
-    .hobbie{
-        order:2;
-    }
-    .websiteHeader{
-        display: none;
-    }
-    header{
-        justify-content: right;
-    }
-    .dropdown{
-    display:contents;
-}
-    
-}
-
 .dark-mode{
     background-color: black;
 
@@ -314,11 +281,81 @@ iframe{
 
 }
 
-.for-pdf{
-    background-color: white;
-    color:black;
-    background-image: none;
+#featured-3{
+    margin: 0;
+}
+#introPanel{
+    background-image: url("../assets/images/forest1.jpg");
+}
 
+#personalPhoto{
+    border-radius: 50%;
+}
+
+#homePersonalPhotoContainer{
+    display: flex; 
+    width:100%; 
+    height: 20rem; 
+    position: relative; 
+    background: linear-gradient(to bottom,#3fea2c, #31c47f 50%,white 50%); 
+    flex-wrap: wrap; 
+    align-content: center;
+}
+
+#nav-dropdown-heading{
+    text-align: center;
+    display: none;
+    align-items: center;
+}
+
+#navSmallContainer{
+    display: none;
+}
+
+@media(max-width:1000px) {
+    #start_page_intro{
+        order: -1;
+        text-align: center;
+    }
+    #start_page{
+        justify-content: center;
+    }
+
+    #nav-dropdown-heading{
+        display: inline;
+    }
+
+    #navSmallContainer{
+        display: contents;
+    }
+
+
+    .hobby-image{
+        width: 200px;
+        height:200px;
+    }
+    iframe{
+        width: 400px;
+        height:200px;
+    }
+    .hobbie{
+        order:2;
+    }
+    .websiteHeader{
+        display: none;
+    }
+    header{
+        justify-content: center;
+        display: flex;
+        .dropdown{
+            float:right;
+        }
+        background-image: url("../assets/images/soft.gif");
+    }
+    .dropdown{
+        display:contents;
+    }
+    
 }
 
 @media print{
@@ -357,26 +394,4 @@ iframe{
         margin: 0;
         padding: 0;
     }
-}
-
-.page{
-    position: relative;
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease
-}
-
-.show{
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.icon{
-    width: 40pt;
-    height: 40pt;
-    background-color: transparent;
-}
-
-.textCenter{
-    text-align: center;
 }

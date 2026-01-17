@@ -63,6 +63,8 @@ async function pageToPdf(){
 
 async function movePage(swapPage) {
     changePageContent(swapPage);
+    //console.log(_current);
+    
     updateHistory(true,swapPage);
 }
 
@@ -89,6 +91,7 @@ async function changePageContent(swapPage){
     if(swapPage!="references" && fileElements.length===1){
         $("#nav button.active").removeClass("active");
         $("#"+swapPage).addClass("active");
+        $("#nav-dropdown-heading").text(swapPage.toUpperCase());
     }
      void element.offsetWidth;
 
