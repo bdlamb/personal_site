@@ -1,13 +1,12 @@
 <div>
-    <div class="container d-flex pdf-container">
-        <button class="pdf-button" onclick="pageToPdf();">To PDF</button>
-    </div>
     <section resume>
         <div class="container resume">
-            <h1 id="resumeTitle" class="customHeader">Resume</h1>
-            <hr/>
-            <h2>Summary</h2>
-            <ul>
+            <div id="resumeTitleContainer" class="customHeader">
+                <h1 id="resumeTitle">Resume</h1>
+                <button class="pdf-button" onclick="pageToPdf();">To PDF</button>
+            </div>
+            <h2 class="p-3">Summary</h2>
+            <ul class="listResume">
                 <li >Programing experience in javascript,html,css and node</li>
                 <li >Programing knowledge in C#, C, express, ejs and axios</li>
                 <li >Close to 2 years of mechanical assembly experience</li>
@@ -15,8 +14,8 @@
                 <li >experiencen computer building and troubleshooting</li>
             </ul>
             <hr/>
-            <h2>Experience</h2>
-            <ul>
+            <h2 class="p-3" >Experience</h2>
+            <ul class="listResume">
                 <li>April 2025-October 2025: Software developer at <span class="span-clickable" onclick="movePage('experinces eventbuilder');">EventBuilder</span>
                     <ul>
                         <li>
@@ -101,8 +100,8 @@
                 </li>
             </ul>
             <hr>
-            <h2>Education</h2>
-            <ul>
+            <h2 class="p-3" >Education</h2>
+            <ul class="listResume">
                 <li >Washington State University Vancouver, 2011-2013, BS in computer science</li>
                 <li >Clark College, 2006-2011, undergraduate degree</li>
             </ul>

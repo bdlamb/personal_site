@@ -104,11 +104,19 @@ iframe{
     border-radius: 20%;
     background-color: blue;
     color:rgb(127, 218, 52);
+    float: right;
+    margin-top: 1em;
+    margin-right: 1em;
 }
 
 .customHeader{
     background-image: linear-gradient(90deg, #0033ff 0%, #2CCE2C 100%);
     padding-left: 10pt;
+    padding-top: 10pt;
+}
+
+.listResume{
+    margin-left: 1em;
 }
 
 .fa {
@@ -133,6 +141,7 @@ iframe{
 .more-title-text{
     align-self: center;
     margin-left: .5em;
+    margin-top:1em;
 }
 
 .more-icon{
@@ -292,6 +301,11 @@ iframe{
     border-radius: 50%;
 }
 
+#resumeTitle{
+    display: inline;
+    margin-top: 5pt;
+}
+
 #homePersonalPhotoContainer{
     display: flex; 
     width:100%; 
@@ -310,6 +324,10 @@ iframe{
 
 #navSmallContainer{
     display: none;
+}
+
+#resumeTitleContainer{
+    border-bottom: 1pt solid black;
 }
 
 @media(max-width:1000px) {
