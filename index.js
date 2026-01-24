@@ -26,6 +26,16 @@ checkColoring();
 
 history.pushState({ page: "home" }, "", "");
 
+function hideMe(theWindow){
+    theWindow.style.display="none";
+
+}
+
+function expandImage(path){
+    document.querySelector("#expandedImage").src=`${path}`;
+    document.querySelector("#imageExpandedContainer").style.display="inline-flex";
+}
+
 window.addEventListener("popstate", (ev)=>{
     console.log("back hit");
     if(_history.length==0){
