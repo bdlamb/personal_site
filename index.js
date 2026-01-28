@@ -10,34 +10,12 @@ $("#check").on("click",()=>{
     sliderSound.play();
 });
 
-
-function darkModeChange(e){
-    document.body.classList.toggle('dark-mode');
-}
-
-function darkModeChangeCompact(){
-    $("#check").trigger("click");
-}
-
 $("#check").on("click",darkModeChange);
 
 movePage("home");
 checkColoring();
 
-history.pushState({ page: "home" }, "", "");
-
-function hideMe(theWindow){
-    theWindow.style.display="none";
-
-}
-
-function expandImage(path){
-    document.querySelector("#expandedImage").src=`${path}`;
-    document.querySelector("#imageExpandedContainer").style.display="inline-flex";
-}
-
 window.addEventListener("popstate", (ev)=>{
-    console.log("back hit");
     if(_history.length==0){
         history.back();
     }
@@ -48,6 +26,27 @@ window.addEventListener("popstate", (ev)=>{
     }
     history.replaceState({ page: _history[_history.length-1]}, "", "");
 });
+
+
+history.pushState({ page: "home" }, "", "");
+
+function darkModeChange(e){
+    document.body.classList.toggle('dark-mode');
+}
+
+function darkModeChangeCompact(){
+    $("#check").trigger("click");
+}
+
+function hideMe(theWindow){
+    theWindow.style.display="none";
+
+}
+
+function expandImage(path){
+    document.querySelector("#expandedImage").src=`${path}`;
+    document.querySelector("#imageExpandedContainer").style.display="inline-flex";
+}
 
 function checkColoring(){
     var darkThemPefered=window.matchMedia('(prefers-color-scheme: dark)');
@@ -73,8 +72,6 @@ async function pageToPdf(){
 
 async function movePage(swapPage) {
     changePageContent(swapPage);
-    //console.log(_current);
-    
     updateHistory(true,swapPage);
 }
 

@@ -189,7 +189,7 @@ iframe{
         color: blue;
 }
 .dropdown-item:hover{
-    color:blue;
+        color:green;
 }
 
 .dropdown-toggle:focus{
